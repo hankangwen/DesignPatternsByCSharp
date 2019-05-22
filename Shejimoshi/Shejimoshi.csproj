@@ -43,6 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Factory\Operation.cs" />
+    <Compile Include="Factory\OperationAdd.cs" />
+    <Compile Include="Factory\OperationDiv.cs" />
+    <Compile Include="Factory\OperationFactory.cs" />
+    <Compile Include="Factory\OperationMul.cs" />
+    <Compile Include="Factory\OperationSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
