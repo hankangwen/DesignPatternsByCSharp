@@ -51,9 +51,15 @@
     <Compile Include="Factory\OperationSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\CashContext.cs" />
+    <Compile Include="Strategy\CashNormal.cs" />
+    <Compile Include="Strategy\CashRebate.cs" />
+    <Compile Include="Strategy\CashReturn.cs" />
+    <Compile Include="Strategy\CashSuper.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
