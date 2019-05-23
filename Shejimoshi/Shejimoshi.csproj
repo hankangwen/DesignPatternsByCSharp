@@ -47,6 +47,11 @@
     <Compile Include="Agent\MyAgent.cs" />
     <Compile Include="Agent\Pursuit.cs" />
     <Compile Include="Agent\SchoolGirl.cs" />
+    <Compile Include="Builder2\MyBuilder.cs" />
+    <Compile Include="Builder2\ConcreteBuilder2.cs" />
+    <Compile Include="Builder2\ConcreteBuilder1.cs" />
+    <Compile Include="Builder2\Director.cs" />
+    <Compile Include="Builder2\Product.cs" />
     <Compile Include="Builder\PersonBuilder.cs" />
     <Compile Include="Builder\PersonDirector.cs" />
     <Compile Include="Builder\PersonThinBuilder.cs" />

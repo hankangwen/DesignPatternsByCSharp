@@ -1,5 +1,6 @@
 ﻿using Shejimoshi.Agent;
 using Shejimoshi.Builder;
+using Shejimoshi.Builder2;
 using Shejimoshi.Decorator;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
@@ -21,8 +22,23 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestBuilder();
+            TestBuilder2();
 
+        }
+
+        static void TestBuilder2()
+        {
+            Director director = new Director();
+            MyBuilder b1 = new ConcreteBuilder1();
+            MyBuilder b2 = new ConcreteBuilder2();
+
+            director.Construct(b1);
+            Product p1 = b1.GetResult();
+            p1.Show();
+
+            director.Construct(b2);
+            Product p2 = b2.GetResult();
+            p2.Show();
         }
 
         /// <summary>
