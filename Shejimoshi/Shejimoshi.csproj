@@ -52,6 +52,12 @@
     <Compile Include="Decorator\Person.cs" />
     <Compile Include="Decorator\Sneakers.cs" />
     <Compile Include="Decorator\TShirts.cs" />
+    <Compile Include="Facade\MyFacade.cs" />
+    <Compile Include="Facade\SubSystemFive.cs" />
+    <Compile Include="Facade\SubSystemFour.cs" />
+    <Compile Include="Facade\SubSystemThree.cs" />
+    <Compile Include="Facade\SubSystemTwo.cs" />
+    <Compile Include="Facade\SubSystemOne.cs" />
     <Compile Include="FactoryFunction\AddFactory.cs" />
     <Compile Include="FactoryFunction\DivFactory.cs" />
     <Compile Include="FactoryFunction\IFactory.cs" />

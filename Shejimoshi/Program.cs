@@ -1,5 +1,6 @@
 ﻿using Shejimoshi.Agent;
 using Shejimoshi.Decorator;
+using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
 using Shejimoshi.ProtoType;
@@ -19,7 +20,20 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestTemplateMethod();
+            TestFacede();
+
+        }
+
+        /// <summary>
+        /// 外观模式
+        /// </summary>
+        static void TestFacede()
+        {
+            MyFacade facade = new MyFacade();
+
+            facade.MethodA();
+            facade.MethodB();
+
         }
 
         /// <summary>
