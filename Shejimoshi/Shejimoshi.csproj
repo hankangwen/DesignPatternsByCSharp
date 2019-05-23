@@ -82,6 +82,10 @@
     <Compile Include="Factory\OperationFactory.cs" />
     <Compile Include="Factory\OperationMul.cs" />
     <Compile Include="Factory\OperationSub.cs" />
+    <Compile Include="ObserverFunction\ConcreteObserver.cs" />
+    <Compile Include="ObserverFunction\ConcreteSubject.cs" />
+    <Compile Include="ObserverFunction\Observer.cs" />
+    <Compile Include="ObserverFunction\Subject.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ProtoType2\Resume.cs" />

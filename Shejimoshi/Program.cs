@@ -5,6 +5,7 @@ using Shejimoshi.Decorator;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
+using Shejimoshi.ObserverFunction;
 using Shejimoshi.ProtoType;
 using Shejimoshi.ProtoType2;
 using Shejimoshi.Proxy;
@@ -22,8 +23,22 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestBuilder2();
+            TestObserver();
 
+        }
+
+        /// <summary>
+        /// 观察者模式
+        /// </summary>
+        static void TestObserver()
+        {
+            ConcreteSubject s = new ConcreteSubject();
+            s.Attach(new ConcreteObserver(s, "X"));
+            s.Attach(new ConcreteObserver(s, "Y"));
+            s.Attach(new ConcreteObserver(s, "Z"));
+
+            s.SubjectState = "ABC";
+            s.Notify();
         }
 
         static void TestBuilder2()
