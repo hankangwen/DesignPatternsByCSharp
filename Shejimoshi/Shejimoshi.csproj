@@ -52,6 +52,16 @@
     <Compile Include="Decorator\Person.cs" />
     <Compile Include="Decorator\Sneakers.cs" />
     <Compile Include="Decorator\TShirts.cs" />
+    <Compile Include="FactoryFunction\AddFactory.cs" />
+    <Compile Include="FactoryFunction\DivFactory.cs" />
+    <Compile Include="FactoryFunction\IFactory.cs" />
+    <Compile Include="FactoryFunction\MulFactory.cs" />
+    <Compile Include="FactoryFunction\Operation.cs" />
+    <Compile Include="FactoryFunction\OperationAdd.cs" />
+    <Compile Include="FactoryFunction\OperationDiv.cs" />
+    <Compile Include="FactoryFunction\OperationMul.cs" />
+    <Compile Include="FactoryFunction\OperationSub.cs" />
+    <Compile Include="FactoryFunction\SubFactory.cs" />
     <Compile Include="Factory\Operation.cs" />
     <Compile Include="Factory\OperationAdd.cs" />
     <Compile Include="Factory\OperationDiv.cs" />

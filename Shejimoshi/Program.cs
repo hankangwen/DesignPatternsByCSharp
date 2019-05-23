@@ -1,6 +1,7 @@
 ﻿using Shejimoshi.Agent;
 using Shejimoshi.Decorator;
 using Shejimoshi.Factory;
+using Shejimoshi.FactoryFunction;
 using Shejimoshi.Proxy;
 using Shejimoshi.Strategy;
 using System;
@@ -15,8 +16,20 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestProxy();
+            TestFactoryFunction();
 
+        }
+
+        /// <summary>
+        /// 工厂模式方法
+        /// </summary>
+        static void TestFactoryFunction()
+        {
+            IFactory operFactory = new AddFactory();
+            FactoryFunction.Operation oper = operFactory.CreateOperation();
+            oper.NumA = 1;
+            oper.NumB = 2;
+            Console.WriteLine(oper.GetResult());
         }
 
         /// <summary>
@@ -97,7 +110,7 @@ namespace Shejimoshi
                 Console.WriteLine("B:");
                 string strNumB = Console.ReadLine();
 
-                Operation oper = OperationFactory.createFactory(strOperation);
+                Factory.Operation oper = OperationFactory.createFactory(strOperation);
                 oper.NumA = Convert.ToDouble(strNumA);
                 oper.NumB = Convert.ToDouble(strNumB);
                 Console.WriteLine(oper.GetResult());
