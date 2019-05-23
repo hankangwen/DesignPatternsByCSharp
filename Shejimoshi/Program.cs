@@ -1,4 +1,5 @@
-﻿using Shejimoshi.Decorator;
+﻿using Shejimoshi.Agent;
+using Shejimoshi.Decorator;
 using Shejimoshi.Factory;
 using Shejimoshi.Strategy;
 using System;
@@ -13,11 +14,28 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestDecorator();
+            TestAgent();
 
         }
 
+        /// <summary>
+        /// 代理模式
+        /// </summary>
+        static void TestAgent()
+        {
+            SchoolGirl jiaojiao = new SchoolGirl();
+            jiaojiao.Name = "李娇娇";
 
+            Proxy daili = new Proxy(jiaojiao);
+
+            daili.GiveDolls();
+            daili.GiveFlowers();
+            daili.GiveChocolate();
+        }
+
+        /// <summary>
+        /// 装饰模式
+        /// </summary>
         static void TestDecorator()
         {
             Person xiaocai = new Person("xiaocai");
