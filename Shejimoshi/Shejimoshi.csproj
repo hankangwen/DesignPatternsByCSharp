@@ -44,7 +44,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Agent\GiveGift.cs" />
-    <Compile Include="Agent\Proxy.cs" />
+    <Compile Include="Agent\MyAgent.cs" />
     <Compile Include="Agent\Pursuit.cs" />
     <Compile Include="Agent\SchoolGirl.cs" />
     <Compile Include="Decorator\BigTrouser.cs" />
@@ -60,6 +60,9 @@
     <Compile Include="Factory\OperationSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Proxy\MyProxy.cs" />
+    <Compile Include="Proxy\RealSubject.cs" />
+    <Compile Include="Proxy\Subject.cs" />
     <Compile Include="Strategy\CashContext.cs" />
     <Compile Include="Strategy\CashNormal.cs" />
     <Compile Include="Strategy\CashRebate.cs" />

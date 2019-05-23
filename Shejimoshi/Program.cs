@@ -1,6 +1,7 @@
 ﻿using Shejimoshi.Agent;
 using Shejimoshi.Decorator;
 using Shejimoshi.Factory;
+using Shejimoshi.Proxy;
 using Shejimoshi.Strategy;
 using System;
 using System.Collections.Generic;
@@ -14,8 +15,17 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestAgent();
+            TestProxy();
 
+        }
+
+        /// <summary>
+        /// 代理模式
+        /// </summary>
+        static void TestProxy()
+        {
+            MyProxy myProxy = new MyProxy();
+            myProxy.Request();
         }
 
         /// <summary>
@@ -26,7 +36,7 @@ namespace Shejimoshi
             SchoolGirl jiaojiao = new SchoolGirl();
             jiaojiao.Name = "李娇娇";
 
-            Proxy daili = new Proxy(jiaojiao);
+            MyAgent daili = new MyAgent(jiaojiao);
 
             daili.GiveDolls();
             daili.GiveFlowers();

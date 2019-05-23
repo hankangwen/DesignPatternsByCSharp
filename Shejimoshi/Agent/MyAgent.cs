@@ -9,10 +9,10 @@ namespace Shejimoshi.Agent
     /// <summary>
     /// 代理
     /// </summary>
-    class Proxy
+    class MyAgent
     {
         Pursuit gg;
-        public Proxy(SchoolGirl mm)
+        public MyAgent(SchoolGirl mm)
         {
             gg = new Pursuit(mm);
         }
