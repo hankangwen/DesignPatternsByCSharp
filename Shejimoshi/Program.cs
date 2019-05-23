@@ -1,4 +1,5 @@
 ﻿using Shejimoshi.Agent;
+using Shejimoshi.Builder;
 using Shejimoshi.Decorator;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
@@ -20,7 +21,22 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestFacede();
+            TestBuilder();
+
+        }
+
+        /// <summary>
+        /// 建造者模式
+        /// </summary>
+        static void TestBuilder()
+        {
+            PersonThinBuilder ptb = new PersonThinBuilder("draw", "pen");
+            PersonDirector personDirector = new PersonDirector(ptb);
+            personDirector.CreatePerson();
+
+            PersonThinBuilder pfb = new PersonThinBuilder("draw", "pen");
+            PersonDirector pdFat = new PersonDirector(pfb);
+            pdFat.CreatePerson();
 
         }
 

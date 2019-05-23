@@ -47,6 +47,9 @@
     <Compile Include="Agent\MyAgent.cs" />
     <Compile Include="Agent\Pursuit.cs" />
     <Compile Include="Agent\SchoolGirl.cs" />
+    <Compile Include="Builder\PersonBuilder.cs" />
+    <Compile Include="Builder\PersonDirector.cs" />
+    <Compile Include="Builder\PersonThinBuilder.cs" />
     <Compile Include="Decorator\BigTrouser.cs" />
     <Compile Include="Decorator\Finery.cs" />
     <Compile Include="Decorator\Person.cs" />
