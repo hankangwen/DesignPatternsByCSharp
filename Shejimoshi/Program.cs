@@ -1,4 +1,5 @@
-﻿using Shejimoshi.Factory;
+﻿using Shejimoshi.Decorator;
+using Shejimoshi.Factory;
 using Shejimoshi.Strategy;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,25 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestStrategy();
+            TestDecorator();
+
+        }
+
+
+        static void TestDecorator()
+        {
+            Person xiaocai = new Person("xiaocai");
+            Console.WriteLine("\n第一种装扮：");
+
+            Sneakers sneaker = new Sneakers();
+            BigTrouser bigTrouser = new BigTrouser();
+            TShirts shirts = new TShirts();
+
+            sneaker.Decorate(xiaocai);
+            bigTrouser.Decorate(sneaker);
+            shirts.Decorate(bigTrouser);
+            shirts.Show();
+
 
         }
 

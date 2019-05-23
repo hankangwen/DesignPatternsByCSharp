@@ -43,6 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Decorator\BigTrouser.cs" />
+    <Compile Include="Decorator\Finery.cs" />
+    <Compile Include="Decorator\Person.cs" />
+    <Compile Include="Decorator\Sneakers.cs" />
+    <Compile Include="Decorator\TShirts.cs" />
     <Compile Include="Factory\Operation.cs" />
     <Compile Include="Factory\OperationAdd.cs" />
     <Compile Include="Factory\OperationDiv.cs" />
@@ -60,8 +65,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Decorator\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
