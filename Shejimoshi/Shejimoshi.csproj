@@ -70,6 +70,10 @@
     <Compile Include="Factory\OperationSub.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ProtoType2\Resume.cs" />
+    <Compile Include="ProtoType2\WorkExperience.cs" />
+    <Compile Include="ProtoType\ConcretePrototype1.cs" />
+    <Compile Include="ProtoType\Prototype.cs" />
     <Compile Include="Proxy\MyProxy.cs" />
     <Compile Include="Proxy\RealSubject.cs" />
     <Compile Include="Proxy\Subject.cs" />
@@ -78,6 +82,9 @@
     <Compile Include="Strategy\CashRebate.cs" />
     <Compile Include="Strategy\CashReturn.cs" />
     <Compile Include="Strategy\CashSuper.cs" />
+    <Compile Include="Template\AbstractClass.cs" />
+    <Compile Include="Template\ConcreteClassB.cs" />
+    <Compile Include="Template\ConcreteClassA.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

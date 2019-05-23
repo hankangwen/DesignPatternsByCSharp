@@ -2,8 +2,11 @@
 using Shejimoshi.Decorator;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
+using Shejimoshi.ProtoType;
+using Shejimoshi.ProtoType2;
 using Shejimoshi.Proxy;
 using Shejimoshi.Strategy;
+using Shejimoshi.Template;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +19,49 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestFactoryFunction();
+            TestTemplateMethod();
+        }
 
+        /// <summary>
+        /// 模板方法模式
+        /// </summary>
+        static void TestTemplateMethod()
+        {
+            AbstractClass c;
+            c = new ConcreteClassA();
+            c.TemplateMethod();
+
+            c = new ConcreteClassB();
+            c.TemplateMethod();
+        }
+
+        /// <summary>
+        /// 原型模式2
+        /// </summary>
+        static void TestProtoType2() {
+            Resume a = new Resume("xiaowen");
+            a.SetPersonalInfo("boy", "20");
+            a.SetWorkExperience("2018-2019", "xxCompany");
+
+            Resume b = (Resume)a.Clone();
+            b.SetWorkExperience("2015-2016", "yyCompany");
+
+            Resume c = (Resume)a.Clone();
+            c.SetPersonalInfo("boy", "22");
+
+            a.Display();
+            b.Display();
+            c.Display();
+        }
+
+        /// <summary>
+        /// 原型模式
+        /// </summary>
+        static void TestProtoType()
+        {
+            ConcretePrototype1 p1 = new ConcretePrototype1("I");
+            ConcretePrototype1 p2 = (ConcretePrototype1)p1.Clone();
+            Console.WriteLine("Cloned:{0}", p2.Id);
         }
 
         /// <summary>
