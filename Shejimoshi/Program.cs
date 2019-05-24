@@ -37,14 +37,13 @@ namespace Shejimoshi
         {
             User user = new User();
             Department dept = new Department();
-
-            AbstractFactory.IFactory factory = new AccessFactory();
-            IUser iu = factory.CreateUser();
+            
+            IUser iu = DataAccess.CreateUser();
 
             iu.Insert(user);
             iu.GetUser(1);
 
-            IDepartment id = factory.GetDepartment();
+            IDepartment id = DataAccess.CreateDepartment();
             id.Insert(dept);
             id.GetDepartment(1);
         }
