@@ -1,4 +1,5 @@
 ﻿using Shejimoshi.AbstractFactory;
+using Shejimoshi.Adapter;
 using Shejimoshi.Agent;
 using Shejimoshi.Builder;
 using Shejimoshi.Builder2;
@@ -7,6 +8,7 @@ using Shejimoshi.Delegate;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
+using Shejimoshi.NBAAdapter;
 using Shejimoshi.ObserverFunction;
 using Shejimoshi.ProtoType;
 using Shejimoshi.ProtoType2;
@@ -26,8 +28,32 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestStatic();
+            TestNBAAdapter();
 
+        }
+
+        /// <summary>
+        /// NBA适配器模式
+        /// </summary>
+        static void TestNBAAdapter()
+        {
+            Player b = new Forwards("badier");
+            b.Attack();
+            Player m = new Guards("maike");
+            m.Attack();
+
+            Player ym = new Center("yaoming");
+            ym.Attack();
+            ym.Defence();
+        }
+
+        /// <summary>
+        /// 适配器模式
+        /// </summary>
+        static void TestAdapter()
+        {
+            Target target = new MyAdapter();
+            target.Request();
         }
 
         /// <summary>

@@ -53,6 +53,9 @@
     <Compile Include="AbstractFactory\SqlserverDepartment.cs" />
     <Compile Include="AbstractFactory\SqlserverUser.cs" />
     <Compile Include="AbstractFactory\User.cs" />
+    <Compile Include="Adapter\Adaptee.cs" />
+    <Compile Include="Adapter\MyAdapter.cs" />
+    <Compile Include="Adapter\Target.cs" />
     <Compile Include="Agent\GiveGift.cs" />
     <Compile Include="Agent\MyAgent.cs" />
     <Compile Include="Agent\Pursuit.cs" />
@@ -97,6 +100,12 @@
     <Compile Include="Factory\OperationFactory.cs" />
     <Compile Include="Factory\OperationMul.cs" />
     <Compile Include="Factory\OperationSub.cs" />
+    <Compile Include="NBAAdapter\Center.cs" />
+    <Compile Include="NBAAdapter\ForeignCenter.cs" />
+    <Compile Include="NBAAdapter\Forwards.cs" />
+    <Compile Include="NBAAdapter\Guards.cs" />
+    <Compile Include="NBAAdapter\Player.cs" />
+    <Compile Include="NBAAdapter\Translator.cs" />
     <Compile Include="ObserverFunction\ConcreteObserver.cs" />
     <Compile Include="ObserverFunction\ConcreteSubject.cs" />
     <Compile Include="ObserverFunction\Observer.cs" />
