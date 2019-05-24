@@ -1,4 +1,5 @@
-﻿using Shejimoshi.Agent;
+﻿using Shejimoshi.AbstractFactory;
+using Shejimoshi.Agent;
 using Shejimoshi.Builder;
 using Shejimoshi.Builder2;
 using Shejimoshi.Decorator;
@@ -24,9 +25,53 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestDelegate();
+            TestFactoryByDB();
+
 
         }
+
+        /// <summary>
+        /// 抽象工厂模式
+        /// </summary>
+        static void TestFactoryByDB()
+        {
+            User user = new User();
+            Department dept = new Department();
+
+            AbstractFactory.IFactory factory = new AccessFactory();
+            IUser iu = factory.CreateUser();
+
+            iu.Insert(user);
+            iu.GetUser(1);
+
+            IDepartment id = factory.GetDepartment();
+            id.Insert(dept);
+            id.GetDepartment(1);
+        }
+
+        #region test delegate
+        delegate double CalEventHandler(double numA, double numB);
+        static event CalEventHandler CalFunc;
+
+        static void Testdelegate()
+        {
+            CalFunc += new CalEventHandler(Add);
+            Console.WriteLine(CalFunc(3, 2));
+
+            CalFunc += new CalEventHandler(Mul);
+            Console.WriteLine(CalFunc(3, 2));
+        }
+
+        static double Add(double numA, double numB) {
+            double result = numA + numB;
+            return result;
+        }
+        static double Mul(double numA, double numB)
+        {
+            double result = numA * numB;
+            return result;
+        }
+        #endregion
 
         /// <summary>
         /// 事件委托实现
@@ -38,6 +83,8 @@ namespace Shejimoshi
             StockObserver tongshi1 = new StockObserver("xiaohuang", huhansan);
             NBAObserver tongshi2 = new NBAObserver("xiaoming", huhansan);
 
+            // 1.一个委托可以搭载多个方法，所有方法被依次唤起
+            // 2.委托对象所搭载的方法并不需要属于同一个类
             huhansan.Update += new MYEventHandler(tongshi1.CloseStockmarket);
             huhansan.Update += new MYEventHandler(tongshi2.CloseNBADirectSeeding);
 
@@ -148,7 +195,7 @@ namespace Shejimoshi
         /// </summary>
         static void TestFactoryFunction()
         {
-            IFactory operFactory = new AddFactory();
+            FactoryFunction.IFactory operFactory = new AddFactory();
             FactoryFunction.Operation oper = operFactory.CreateOperation();
             oper.NumA = 1;
             oper.NumB = 2;

@@ -43,6 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AbstractFactory\AccessDepartment.cs" />
+    <Compile Include="AbstractFactory\AccessFactory.cs" />
+    <Compile Include="AbstractFactory\AccessUser.cs" />
+    <Compile Include="AbstractFactory\Department.cs" />
+    <Compile Include="AbstractFactory\IDepartment.cs" />
+    <Compile Include="AbstractFactory\IFactory.cs" />
+    <Compile Include="AbstractFactory\IUser.cs" />
+    <Compile Include="AbstractFactory\SqlserverDepartment.cs" />
+    <Compile Include="AbstractFactory\SqlServerFactory.cs" />
+    <Compile Include="AbstractFactory\SqlserverUser.cs" />
+    <Compile Include="AbstractFactory\User.cs" />
     <Compile Include="Agent\GiveGift.cs" />
     <Compile Include="Agent\MyAgent.cs" />
     <Compile Include="Agent\Pursuit.cs" />
