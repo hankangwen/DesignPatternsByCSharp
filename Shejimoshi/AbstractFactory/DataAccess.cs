@@ -3,46 +3,27 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
+using System.Configuration;
 
 namespace Shejimoshi.AbstractFactory
 {
     class DataAccess
     {
-        private static readonly string db = "Sqlserver";
-        //private static readonly string db = "Access";
+        private static readonly string AssemblyName = "Shejimoshi";
+        private static readonly string db = ConfigurationManager.AppSettings["DB"];
 
         public static IUser CreateUser()
         {
-            IUser result = null;
-            switch (db)
-            {
-                case "Sqlserver":
-                    result = new SqlserverUser();
-                    break;
-                case "Access":
-                    result = new AccessUser();
-                    break;
-                default:
-                    break;
-            }
-            return result;
+            Console.WriteLine(db);
+            string className = AssemblyName + ".AbstractFactory." + db + "User";
+            return (IUser)Assembly.Load(AssemblyName).CreateInstance(className);
         }
 
         public static IDepartment CreateDepartment()
         {
-            IDepartment result = null;
-            switch (db)
-            {
-                case "Sqlserver":
-                    result = new SqlserverDepartment();
-                    break;
-                case "Access":
-                    result = new AccessDepartment();
-                    break;
-                default:
-                    break;
-            }
-            return result;
+            string className = AssemblyName + ".AbstractFactory." + db + "Department";
+            return (IDepartment)Assembly.Load(AssemblyName).CreateInstance(className);
         }
     }
 }
