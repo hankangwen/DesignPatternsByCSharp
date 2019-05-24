@@ -110,6 +110,14 @@
     <Compile Include="Proxy\MyProxy.cs" />
     <Compile Include="Proxy\RealSubject.cs" />
     <Compile Include="Proxy\Subject.cs" />
+    <Compile Include="State\AfternoonState.cs" />
+    <Compile Include="State\EveningState.cs" />
+    <Compile Include="State\NoonState.cs" />
+    <Compile Include="State\ForenoonState.cs" />
+    <Compile Include="State\ResetState.cs" />
+    <Compile Include="State\SleepingState.cs" />
+    <Compile Include="State\Work.cs" />
+    <Compile Include="State\State.cs" />
     <Compile Include="Strategy\CashContext.cs" />
     <Compile Include="Strategy\CashNormal.cs" />
     <Compile Include="Strategy\CashRebate.cs" />

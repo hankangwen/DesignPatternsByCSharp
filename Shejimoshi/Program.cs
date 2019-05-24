@@ -11,6 +11,7 @@ using Shejimoshi.ObserverFunction;
 using Shejimoshi.ProtoType;
 using Shejimoshi.ProtoType2;
 using Shejimoshi.Proxy;
+using Shejimoshi.State;
 using Shejimoshi.Strategy;
 using Shejimoshi.Template;
 using System;
@@ -25,9 +26,35 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestFactoryByDB();
+            TestStatic();
 
+        }
 
+        /// <summary>
+        /// 状态模式
+        /// </summary>
+        static void TestStatic()
+        {
+            Work emergencyProjects = new Work();
+            emergencyProjects.Hour = 9;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 10;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 12;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 13;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 14;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 17;
+
+            emergencyProjects.TaskFinished = false;
+
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 19;
+            emergencyProjects.WriteProgram();
+            emergencyProjects.Hour = 22;
+            emergencyProjects.WriteProgram();
         }
 
         /// <summary>
