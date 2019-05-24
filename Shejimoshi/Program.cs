@@ -2,6 +2,7 @@
 using Shejimoshi.Builder;
 using Shejimoshi.Builder2;
 using Shejimoshi.Decorator;
+using Shejimoshi.Delegate;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
@@ -23,8 +24,25 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestObserver();
+            TestDelegate();
 
+        }
+
+        /// <summary>
+        /// 事件委托实现
+        /// </summary>
+        static void TestDelegate()
+        {
+            Boss huhansan = new Boss();
+
+            StockObserver tongshi1 = new StockObserver("xiaohuang", huhansan);
+            NBAObserver tongshi2 = new NBAObserver("xiaoming", huhansan);
+
+            huhansan.Update += new MYEventHandler(tongshi1.CloseStockmarket);
+            huhansan.Update += new MYEventHandler(tongshi2.CloseNBADirectSeeding);
+
+            huhansan.SubjectState = "come back";
+            huhansan.Notify();
         }
 
         /// <summary>

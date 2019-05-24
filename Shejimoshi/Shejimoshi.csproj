@@ -60,6 +60,11 @@
     <Compile Include="Decorator\Person.cs" />
     <Compile Include="Decorator\Sneakers.cs" />
     <Compile Include="Decorator\TShirts.cs" />
+    <Compile Include="Delegate\Secretary.cs" />
+    <Compile Include="Delegate\Boss.cs" />
+    <Compile Include="Delegate\NBAObserver.cs" />
+    <Compile Include="Delegate\StockObserver.cs" />
+    <Compile Include="Delegate\Subject.cs" />
     <Compile Include="Facade\MyFacade.cs" />
     <Compile Include="Facade\SubSystemFive.cs" />
     <Compile Include="Facade\SubSystemFour.cs" />
