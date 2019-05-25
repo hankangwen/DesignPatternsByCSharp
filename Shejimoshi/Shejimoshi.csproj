@@ -100,6 +100,10 @@
     <Compile Include="Factory\OperationFactory.cs" />
     <Compile Include="Factory\OperationMul.cs" />
     <Compile Include="Factory\OperationSub.cs" />
+    <Compile Include="LightStateMoshi\LightContext.cs" />
+    <Compile Include="LightStateMoshi\LightOff.cs" />
+    <Compile Include="LightStateMoshi\LightOn.cs" />
+    <Compile Include="LightStateMoshi\LightState.cs" />
     <Compile Include="NBAAdapter\Center.cs" />
     <Compile Include="NBAAdapter\ForeignCenter.cs" />
     <Compile Include="NBAAdapter\Forwards.cs" />

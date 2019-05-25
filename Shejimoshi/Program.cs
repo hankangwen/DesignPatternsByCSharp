@@ -8,6 +8,7 @@ using Shejimoshi.Delegate;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
+using Shejimoshi.LightStateMoshi;
 using Shejimoshi.NBAAdapter;
 using Shejimoshi.ObserverFunction;
 using Shejimoshi.ProtoType;
@@ -29,8 +30,21 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestStateMoshi();
+            TestLightState();
 
+        }
+
+        /// <summary>
+        /// 状态模式--灯
+        /// </summary>
+        static void TestLightState()
+        {
+            LightContext context = new LightContext(new LightOff());
+
+            context.PressSwitch();
+            context.PressSwitch();
+            context.PressSwitch();
+            context.PressSwitch();
         }
 
         /// <summary>
