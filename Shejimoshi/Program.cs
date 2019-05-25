@@ -14,6 +14,7 @@ using Shejimoshi.ProtoType;
 using Shejimoshi.ProtoType2;
 using Shejimoshi.Proxy;
 using Shejimoshi.State;
+using Shejimoshi.StateMoShi;
 using Shejimoshi.Strategy;
 using Shejimoshi.Template;
 using System;
@@ -28,8 +29,23 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestNBAAdapter();
+            TestStateMoshi();
 
+        }
+
+        /// <summary>
+        /// 状态模式
+        /// </summary>
+        static void TestStateMoshi()
+        {
+            // 设置Context的初始状态为ConcreteStateA
+            MyContext context = new MyContext(new ConcreteStateA());
+
+            // 不断地进行请求，同时更改状态
+            context.Request();
+            context.Request();
+            context.Request();
+            context.Request();
         }
 
         /// <summary>

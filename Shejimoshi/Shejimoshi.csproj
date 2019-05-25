@@ -119,6 +119,10 @@
     <Compile Include="Proxy\MyProxy.cs" />
     <Compile Include="Proxy\RealSubject.cs" />
     <Compile Include="Proxy\Subject.cs" />
+    <Compile Include="StateMoShi\ConcreteStateB.cs" />
+    <Compile Include="StateMoShi\ConcreteStateA.cs" />
+    <Compile Include="StateMoShi\MyContext.cs" />
+    <Compile Include="StateMoShi\State.cs" />
     <Compile Include="State\AfternoonState.cs" />
     <Compile Include="State\EveningState.cs" />
     <Compile Include="State\NoonState.cs" />
@@ -139,6 +143,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="StateMoShi\Readme.txt" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
