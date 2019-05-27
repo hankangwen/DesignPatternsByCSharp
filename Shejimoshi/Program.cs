@@ -8,7 +8,9 @@ using Shejimoshi.Delegate;
 using Shejimoshi.Facade;
 using Shejimoshi.Factory;
 using Shejimoshi.FactoryFunction;
+using Shejimoshi.GameMementoState;
 using Shejimoshi.LightStateMoshi;
+using Shejimoshi.MementoState;
 using Shejimoshi.NBAAdapter;
 using Shejimoshi.ObserverFunction;
 using Shejimoshi.ProtoType;
@@ -30,8 +32,51 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestLightState();
+            TestGameMementoState();
 
+        }
+
+        /// <summary>
+        /// 测试游戏备忘录模式
+        /// </summary>
+        static void TestGameMementoState()
+        {
+            // 大战boss前
+            GameOriginator role = new GameOriginator();
+            role.GetInitState();
+            role.StateDisplay();
+
+            // 保存进度
+            GameCaretaker stateAdmin = new GameCaretaker();
+            stateAdmin.Memento = role.SaveState();
+
+            // 损耗严重
+            role.Fight();
+            role.StateDisplay();
+
+            //恢复备份
+            role.RecoveryState(stateAdmin.Memento);
+            role.StateDisplay();
+        }
+
+        /// <summary>
+        /// 测试备忘录模式
+        /// </summary>
+        static void TestMementoState()
+        {
+            Originator o = new Originator();
+            o.State = "On";
+            o.Show();
+
+            Caretaker c = new Caretaker();
+            c.Memento = o.CreateMemento();
+
+            o.State = "Off";
+            o.Show();
+
+
+            o.SetMemento(c.Memento);
+            o.Show();
         }
 
         /// <summary>
