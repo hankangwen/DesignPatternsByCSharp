@@ -3,6 +3,7 @@ using Shejimoshi.Adapter;
 using Shejimoshi.Agent;
 using Shejimoshi.Builder;
 using Shejimoshi.Builder2;
+using Shejimoshi.CompositeMoshi;
 using Shejimoshi.Decorator;
 using Shejimoshi.Delegate;
 using Shejimoshi.Facade;
@@ -32,8 +33,37 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestGameMementoState();
+            TestComposite();
 
+        }
+
+        /// <summary>
+        /// 组合模式
+        /// </summary>
+        static void TestComposite()
+        {
+            Composite root = new Composite("root");
+            root.Add(new Leaf("Leaf A"));
+            root.Add(new Leaf("Leaf B"));
+
+            Composite comp = new Composite("Composite X");
+            comp.Add(new Leaf("Leaf XA"));
+            comp.Add(new Leaf("Leaf XB"));
+
+            root.Add(comp);
+
+            Composite comp2 = new Composite("Composite XY");
+            comp2.Add(new Leaf("Leaf XYA"));
+            comp2.Add(new Leaf("Leaf XYB"));
+            comp.Add(comp2);
+
+            root.Add(new Leaf("Leaf C"));
+
+            Leaf leaf = new Leaf("Leaf D");
+            root.Add(leaf);
+            root.Remove(leaf);
+
+            root.Display(1);
         }
 
         /// <summary>

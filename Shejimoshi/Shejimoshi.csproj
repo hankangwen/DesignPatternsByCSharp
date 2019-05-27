@@ -68,6 +68,9 @@
     <Compile Include="Builder\PersonBuilder.cs" />
     <Compile Include="Builder\PersonDirector.cs" />
     <Compile Include="Builder\PersonThinBuilder.cs" />
+    <Compile Include="CompositeMoshi\Component.cs" />
+    <Compile Include="CompositeMoshi\Composite.cs" />
+    <Compile Include="CompositeMoshi\Leaf.cs" />
     <Compile Include="Decorator\BigTrouser.cs" />
     <Compile Include="Decorator\Finery.cs" />
     <Compile Include="Decorator\Person.cs" />
