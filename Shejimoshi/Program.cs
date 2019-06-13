@@ -21,6 +21,7 @@ using Shejimoshi.State;
 using Shejimoshi.StateMoShi;
 using Shejimoshi.Strategy;
 using Shejimoshi.Template;
+using Shejimoshi.Test.SimpleFactory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,7 +34,15 @@ namespace Shejimoshi
     {
         static void Main(string[] args)
         {
-            TestComposite();
+
+            TestSimpleFactory();
+
+        }
+
+        static void TestSimpleFactory()
+        {
+            TestMyFactory fa = new TestMyFactory();
+
 
         }
 

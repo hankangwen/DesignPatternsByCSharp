@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace Shejimoshi.Factory
 {
+    /// <summary>
+    /// 0.简单工厂模式
+    /// </summary>
     class OperationFactory
     {
         public static Operation createFactory(string operate) {

@@ -152,6 +152,12 @@
     <Compile Include="Template\AbstractClass.cs" />
     <Compile Include="Template\ConcreteClassB.cs" />
     <Compile Include="Template\ConcreteClassA.cs" />
+    <Compile Include="Test\SimpleFactory\TestMyFactory.cs" />
+    <Compile Include="Test\SimpleFactory\OperDiv.cs" />
+    <Compile Include="Test\SimpleFactory\OperMul.cs" />
+    <Compile Include="Test\SimpleFactory\OperSub.cs" />
+    <Compile Include="Test\SimpleFactory\OperAdd.cs" />
+    <Compile Include="Test\SimpleFactory\OperBase.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
